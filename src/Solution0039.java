@@ -11,7 +11,7 @@ import java.util.List;
  * 解集不能包含重复的组合。 
  *
  */
-public class Solution39 {
+public class Solution0039 {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List list = new ArrayList();
