@@ -27,8 +27,8 @@ import java.util.LinkedList;
 public class Solution0019 {
 
     public static void main(String[] args) {
-        ListNode1 listNode1 = new ListNode1(1, new ListNode1(2, new ListNode1(3)));
-        ListNode1 listNode11 = removeNthFromEnd1(listNode1, 1);
+        ListNode ListNode = new ListNode(1, new ListNode(2, new ListNode(3)));
+        ListNode listNode11 = removeNthFromEnd1(ListNode, 1);
     }
 
     /**
@@ -37,22 +37,22 @@ public class Solution0019 {
      * @param n
      * @return
      */
-    public static ListNode1 removeNthFromEnd(ListNode1 head, int n) {
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
         // 从哑节点开始遍历，删除第L-n+1的下一个节点
-        ListNode1 node1 = new ListNode1(0, head);
+        ListNode node1 = new ListNode(0, head);
         int length = getLength(head);
-        ListNode1 cur = node1;
+        ListNode cur = node1;
         // 遍历到第L-n+1个节点
         for (int i = 1; i < length - n + 1; ++i){
             cur = cur.next;
         }
         // 修改指针指向需要删除节点的后一个节点
         cur.next = cur.next.next;
-        ListNode1 res = node1.next;
+        ListNode res = node1.next;
         return res;
     }
 
-    public static int getLength(ListNode1 head){
+    public static int getLength(ListNode head){
         int length = 0;
         while (head != null){
             ++length;
@@ -69,10 +69,10 @@ public class Solution0019 {
      * @param n
      * @return
      */
-    public static ListNode1 removeNthFromEnd1(ListNode1 head, int n) {
-        ListNode1 listNode1 = new ListNode1(0, head);
-        Deque<ListNode1> stack = new LinkedList<ListNode1>();
-        ListNode1 cur = listNode1;
+    public static ListNode removeNthFromEnd1(ListNode head, int n) {
+        ListNode ListNode = new ListNode(0, head);
+        Deque<ListNode> stack = new LinkedList<ListNode>();
+        ListNode cur = ListNode;
         while (cur != null){
             stack.push(cur);
             cur = cur.next;
@@ -81,9 +81,9 @@ public class Solution0019 {
             stack.pop();
         }
         // 检索栈中的第一个元素
-        ListNode1 prev = stack.peek();
+        ListNode prev = stack.peek();
         prev.next = prev.next.next;
-        ListNode1 res = listNode1.next;
+        ListNode res = ListNode.next;
         return res;
     }
 
@@ -91,10 +91,10 @@ public class Solution0019 {
 
 
 
-class ListNode1 {
-    int val;
-    ListNode1 next;
-    ListNode1() {}
-    ListNode1(int val) { this.val = val; }
-    ListNode1(int val, ListNode1 next) { this.val = val; this.next = next; }
-}
+//class ListNode {
+//    int val;
+//    ListNode next;
+//    ListNode() {}
+//    ListNode(int val) { this.val = val; }
+//    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//}

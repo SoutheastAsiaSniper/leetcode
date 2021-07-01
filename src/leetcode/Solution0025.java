@@ -21,10 +21,10 @@ public class Solution0025 {
 
 
 
-class ListNode25 {
-    int val;
-    ListNode25 next;
-    ListNode25() {}
-    ListNode25(int val) { this.val = val; }
-    ListNode25(int val, ListNode25 next) { this.val = val; this.next = next; }
-}
+//class ListNode25 {
+//    int val;
+//    ListNode25 next;
+//    ListNode25() {}
+//    ListNode25(int val) { this.val = val; }
+//    ListNode25(int val, ListNode25 next) { this.val = val; this.next = next; }
+//}
