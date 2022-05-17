@@ -9,7 +9,7 @@ import java.util.List;
  * Time: 下午4:04
  * Description: 输入一个链表，反转链表后，输出新链表的表头。
  */
-public class ReverseLinkedList {
+public class SolutionNC078 {
 
     public static void main(String[] args) {
         ListNode listNode = new ListNode(1);
